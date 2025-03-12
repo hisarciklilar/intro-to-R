@@ -1,0 +1,82 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "R-workshops",
+    "section": "",
+    "text": "Welcome!\nThis workbook is created for the Introduction to R sessions at Coventry University1.\norganised by the School of EFA Economics Lab team in collaboration with the British Council funded project “Strengthening Pathways into Employment: Female Students in Economics and Finance” at Coventry University.\nIt is written using Quarto on RStudio by\nDr Mehtap Hisarciklilar, Centre for Financial and Corporate Integrity\nDr Robert Riegler, Aston University",
+    "crumbs": [
+      "Welcome!"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction to R",
+    "section": "",
+    "text": "1.1 R, R Studio and Quarto\nR is a very powerful statistical software that is becoming increasingly popular. Being able to do data analysis using R will very likely increase your employability.\nWarning: R is not like other apps that you have used! It requires coding. You will need to practice regularly. There will be a lot of struggle, but the result is worth it.\nWe list below the apps that you will need to work with during the sessions. You may install these on your computers. Alternatively, you may use Coventry University’s Appsanywhere platform to get access. But you will find working with the app easier if it is lcoally installed.\nRStudio has four main windows, that often have more than just one purpose. Figure 1.1 provides a brief description of each RStudio window. We will use all of them during the sessions, but the most important ones will be the console and the editor pane.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "R-workshops",
+    "section": "",
+    "text": "The workshop series are organised by the School of EFA Economics Lab team in collaboration with the British Council funded project “Strengthening Pathways into Employment: Female Students in Economics and Finance”.↩︎",
+    "crumbs": [
+      "Welcome!"
+    ]
+  },
+  {
+    "objectID": "intro.html#r-r-studio-and-quarto",
+    "href": "intro.html#r-r-studio-and-quarto",
+    "title": "1  Introduction to R",
+    "section": "",
+    "text": "We will be using R as the statistical analysis tool. For R documentations, support and download links, visit the R Project for Statistical Computing. R is freely available for Linux, MacOS and Windows. Please download the version that matches your computer’s operating system.\nTo facilitate your work with R, we highly recommend to download and install the integrated development environment (IDE) RStudio Desktop from posit. This platform will make it easier for you to write and run R code.\nA final package that we highly recommend you to install is a publishing system, Quarto. You may use Quarto to produce documents in various formats (such as HTML, MS Word, PDF, PowerPoint, etc) while integrating your R code and output. You will easily have the option to change the format of your output as you desire. We will be using Quarto to produce documents in the third session of the series. Please visit Quarto for further information and download.\n\nOnce you download Quarto, you will have access to it through RStudio.\n\n\n\n\n\n\n\n\n\nFigure 1.1: RStudio windows and their functions",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#file-organisation",
+    "href": "intro.html#file-organisation",
+    "title": "1  Introduction to R",
+    "section": "1.2 File Organisation",
+    "text": "1.2 File Organisation\n\nCreate a folder for this workshop. This folder should include all material you download from shared OneDrive folder. Group files in sub-folders in a way that you can locate them easily. So for example, Introduction-to-R may be the name of the folder and then you may have sub-folders such as data, R-scripts, etc.\nIf you are using the computers in the lab, it may be best if you create a folder on your OneDrive account as you can easily access this at home and on-campus.\nBefore working on the data, set your working directory. R will save all files in there and, if you want to open a dataset, R will also look in there first. Select the folder you have created for R workshops.\nUse setwd(the_address_you_would_like_to_locate_your_work) in the console to choose your work directory. You may alternatively do this through the menu:\n\nSession –&gt; Set Working Directory –&gt; Choose Directory\nYou will see the console printing this action, which may help you to remember how to use the console next time.\n\nIf you are unsure of in which folder your work is, type getwd() in the console and R will print the current location you are at.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#getting-help",
+    "href": "intro.html#getting-help",
+    "title": "1  Introduction to R",
+    "section": "1.3 Getting Help",
+    "text": "1.3 Getting Help\nIf you should ever struggle with some of R’s commands, a look into R’s help-files can be very helpful. To access the help file, you have to type into the console window ? and then the command name. For example, if you want to know more about the command getwd(), type the following:\n\n?getwd()",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R</span>"
+    ]
+  }
+]
