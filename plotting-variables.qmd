@@ -1,0 +1,38 @@
+# Basic Plots of Data
+
+In Session 2 of this workshop, we will be using `ggplot2` for data visualisation in R, but for the moment, below are a few examples of what we can do with base R (with base R, we refer to the operations of R that could be done without installing or calling additional libraries).
+
+**Scatterplot** of
+
+```{r}
+# scatterplot showing the relationship between price and crimes 
+plot(hprice2$price ~ hprice2$crime, xlab = "Crimes committed per capita", 
+     ylab = "Median housing price, $", 
+     main = "Negative effect of crime on housing price")
+
+# Histogram of price and logarithmic price
+hist(hprice2$price, xlab = "Median housing price, $", 
+     main = "Histogram of median houseing price, $")
+
+hist(hprice2$lprice, xlab = "Logarithm of median housing price, $", 
+     main = "Logarithm of median housing price, $")
+
+```
+
+here are alternative packages which could be used to label variables. We will be using the `Hmisc` package. Remember to install this package and call the library by running the code below (without the `#`):
+
+```{r}
+# install.packages("Hmisc") # to label variables
+library(Hmisc)
+```
+
+We are ready to label our variables:
+
+```{r}
+# label variables
+label(hprice2$price) <- "Median housing price, $"
+label(hprice2$crime) <- "Crimes committed per capita"
+label(hprice2$nox) <- "Nitrogen Oxide in the air, in parts per million"
+label(hprice2$stratio) <- "Average student-teacher ratio of schools in the community"
+label(hprice2$rooms) <- "Average number of rooms in houses in the community"
+```

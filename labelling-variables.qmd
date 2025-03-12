@@ -1,0 +1,19 @@
+# Labeling Variables
+
+There are alternative packages which could be used to label variables. We will be using the `Hmisc` package. Remember to install this package and call the library by running the code below (without the `#`):
+
+```{r}
+# install.packages("Hmisc") # to label variables
+library(Hmisc)
+```
+
+We are ready to label our variables:
+
+```{r}
+# label variables
+label(hprice2$price) <- "Median housing price, $"
+label(hprice2$crime) <- "Crimes committed per capita"
+label(hprice2$nox) <- "Nitrogen Oxide in the air, in parts per million"
+label(hprice2$stratio) <- "Average student-teacher ratio of schools in the community"
+label(hprice2$rooms) <- "Average number of rooms in houses in the community"
+```

@@ -1,0 +1,57 @@
+# Calculating Summary Statistics
+
+-   We may use the `mean()` function to find the average value of a variable. For example, below, we find the average housing price:
+
+```{r}
+# Calculate the average price
+mean(hprice2$price)
+```
+
+-   Similarly `median()` function could be used to find the median.
+
+```{r}
+# Calculate the median price
+median(hprice2$price)
+```
+
+-   Use `sd()` for standard deviation
+
+```{r}
+# Calculate the standard deviation of price
+sd(hprice2$price)
+```
+
+You may wonder why we add `hprice2$` in front of every variable. The reason is that R can store more than one data frame, matrix, list, vector etc., at the same time, so the prefix `hprice2$` is necessary to avoid ambiguity and ensure that we are working with variables in the `hprice2` data. Think of `hprice2$` as an address where e.g. the variable `price` stays. If you have loaded another data frame that contains a `price` variable, R would know that we want to use the variable from the hprice2 data set and not from the other data frame. There are library packages that can facilitate the process, however, these are beyond the scope of this workshop.
+
+In addition to mean and median, we may be interested with the minimum and maximum values. In that case, we can use the `summary()` function to ask for a full set of summary statistics. (Please note that `summary()` function does not report the standard deviation. You will need to use the `sd()` function for that).
+
+```{r}
+# Summary statistics for price
+summary(hprice2$price)
+```
+
+Again, note the use of `hprice2$` above.
+
+We can provide the name of the data set as an argument in the `summary()` function to get summary statistics for all variables in the data.
+
+```{r}
+# summary statistics for all variables
+summary(hprice2)
+```
+
+And finally, if we may want to have summary statistics only for a selection of variables, for example, `price`, `nox`, and `crime`.
+
+```{r}
+# summary statistics for a selection of variables:
+summary(hprice2[, c("price", "nox", "crime")])
+```
+
+We may calculate the covariance or correlation between the variables using the `cov()` and `cor()` functions:
+
+```{r}
+# Covariance between price and crime
+cov(hprice2$price, hprice2$crime)
+
+# Correlation between price and crime
+cor(hprice2$price, hprice2$crime)
+```

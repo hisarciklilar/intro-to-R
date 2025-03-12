@@ -269,3 +269,21 @@ class(f)
 ```{r}
 class(message)
 ```
+
+## Scripts
+
+You can create a draft of your code as you go by using an R *script*. An R script is just a plain text file that you save R code in. You can open an R script in RStudio using the menu bar:
+
+*File –\> New File –\> R Script*
+
+We will write and edit R code in a script. This will help create a reproducible record of your work. When you’re finished for the day, you can save your script and then use it to rerun your entire analysis the next day.
+
+To save a script, click the scripts pane, and then go to *File –\> Save As* in the menu bar.
+
+-   You can automatically execute a line of code in a script by clicking the Run button on the top right of the pane. R will run whichever line of code your cursor is on.
+
+-   If you have a whole section highlighted, R will run the highlighted code.
+
+-   You can run the entire script by clicking the Source button.
+
+-   You can use Control + Return in your keyboard as a shortcut for the Run button. On Macs, that would be Command + Return.

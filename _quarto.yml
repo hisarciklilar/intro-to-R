@@ -8,10 +8,26 @@ book:
   cover-image: cover.png
   chapters:
     - index.qmd
+    
+    - part : Session 1: Introduction to Data Analsysis
+    chapters:
     - intro.qmd
     - basics-of-R.qmd
+    - importing-data.qmd
+    - summary-stats.qmd
+    - labelling-variables.qmd
+    - plotting-variables.qmd
     - references.qmd
 
+  chapters:
+    - index.qmd
+    
+    - part: Seminar 1 (21 January 2025)
+      chapters: 
+      - intro.qmd
+      - basics-of-R.qmd
+    - part: Seminar 2 (28 January 2025)
+    
 bibliography: references.bib
 
 format:

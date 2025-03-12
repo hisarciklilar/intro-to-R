@@ -1,0 +1,270 @@
+# Session 1: Introduction to Data Analysis in R
+
+## Example: House Price Data
+
+The data that we will be using in this session come from R's `wooldridge` package, which includes 115 data sets from "Introductory Econometrics: A Modern Approach, 7e" by Jeffrey M. Wooldridge".
+
+We will start by using `hprice2` data, which includes information on 506 communities in the US Boston area. Below table provides a list of variables that we will use:
+
+| Variable | Description                                               |
+|----------|-----------------------------------------------------------|
+| price    | Median housing price, \$                                  |
+| crime    | Crimes committed per capita                               |
+| nox      | Nitrogen Oxide in the air, in parts per million           |
+| stratio  | Average student-teacher ratio of schools in the community |
+| rooms    | Average number of rooms in houses in the community        |
+| lprice   | Logarithm of price                                        |
+
+## Packages and libraries
+
+In order to access specialised data analysis tools in R, we will need to install some R packages.
+
+"An R **package** is a collection of functions, data, and documentation that extends the capabilities of base R.
+
+We will start by installing the `wooldridge` package. We require this package to access the Wooldridge data sets, mentioned above.
+
+```{r}
+# install.packages("wooldridge")
+```
+
+To install `wooldridge` package, type the above line of code in the console (without the `#`), and then press enter to run it. R will download the packages from CRAN and install them on to your computer.
+
+Once installed, you may use this package after loading it with the `library()` function.
+
+```{r}
+library(wooldridge)
+```
+
+## Open data as an R object
+
+The `hprice2` data that we will be using already comes in R format within the `wooldridge` package. We can call it to our environment by using the `data()` function.
+
+```{r}
+data("hprice2")
+```
+
+Observe that `hprice2` is now added as an object to your environment. We can use the `View` function to view it (Note the capital V in `View`).Type the below line without the `#` in your console.
+
+```{r}
+# View(hprice2)
+```
+
+## Import Excel data into R
+
+Most data we work with are initially in Excel or in text (such as csv) format. Importing data is one of the rare R commands that you can proceed with using the menu. You may find the `Import Dataset` button on the top right window and also under File menu. The `hprice2` data is provided to you in Excel format. Try to import it using `Import Dataset` but this time, in the opening window, name the dataset as `df` under `Import Options` towards the left bottom.
+
+You will see that R executes the following three lines of code:
+
+```{r}
+library(readxl)
+df <- read_excel("data/hprice2.xlsx")
+View(df)
+```
+
+The first line call the library required; the second line reads the Excel file and saves it under name `df` and the third line views the newly imported data.
+
+The example and instructions provided in this section is taken from [@riegler22].
+
+The following exercise gives you a hands-on introduction to basic operations in R using a real-world data set. It begins with importing a MS-Excel data set into R and asks you to perform some basic operations to familiarise yourself with some of the commands that will be relevant for the coursework and in subsequent computer classes.
+
+Please download the Excel data set called `crime.xls` from Aula and save it into a drive of your choice. This is a data set that contains crime levels and other socio-economic information on 46 cities across the US for the year 1982. The full version of the data set can be accessed at <http://fmwww.bc.edu/ec-p/data/wooldridge/datasets.list.html>. The variables are defined as follows:
+
+| Variable | Definition                                 |
+|----------|--------------------------------------------|
+| pop      | actual population in number                |
+| crimes   | total number of crimes                     |
+| unem     | unemployment rate (%)                      |
+| officers | number of police officers                  |
+| pcinc    | per capita income, \$                      |
+| area     | land area, square miles                    |
+| lawexpc  | law enforcement expenditure per capita, \$ |
+
+From here on, you need to open a R script to save all your commands to be able to replicate your results:
+
+### Task 1
+
+#### Task
+
+Import the Excel data set into R.
+
+#### Guidance
+
+The native data format of R is .Rdata, however, you can also open other formats, such as .xlsx, .csv, etc. Non-native data formats have to be imported rather than just opened. Before we can we can import Excel spreadsheets directly into R, we have to activate a R-library first.
+
+You can either use the package manager window (in the right bottom corner of the R screen) and tick the box next to the package name or you type the following into the terminal window (in the left bottom of the R screen)
+
+```{r}
+library(readxl)
+```
+
+This line loads the necessary `readxl` library. But you will probably receive an error message when you run the above line. This is because we first need to install the `read_excel` package. (Note that you will need to type the below line without the pound (hashtag) sign at the beginning of the line).
+
+```{r}
+# install.packages("readxl")
+library(readxl)
+```
+
+There are two ways to import:
+
+1.  Through command line:
+
+    ```{r}
+    crime <- read_excel("./assets/data/crime.xls")
+    ```
+
+    In the above line, we import the dataset with the `read_excel` function and store it under the name `crime`. Notice how the new `crime` data is added as an object in the R environment.
+
+2.  Through menu:
+
+    **File –\> Import Dataset –\> From Excel**
+
+Don't forget to tick the "First Row as Names" box if it is not ticked!
+
+### Task 2
+
+#### Task
+
+View the dataset in R's data viewer.
+
+#### Guidance
+
+To open the data viewer, use the `View` function.
+
+```{r}
+# View(crime)
+```
+
+Note that the first letter of `View` is capitalised.
+
+### Task 3
+
+#### Task
+
+View the first few (six) entries of the crime data to get a feeling of what the values look like.
+
+#### Guidance
+
+Use the `head` function
+
+```{r}
+head(crime)
+```
+
+### Task 4
+
+#### Task
+
+Label the variables using the definitions given above.
+
+#### Guidance
+
+You have to attach a variable label to each variable. There is already a library available which facilitates the allocation of labels to variables. First, we need to install the package!
+
+```{r}
+# install.packages("expss")
+library(expss)
+crime <- apply_labels(crime, 
+                      pop = "actual population in number",
+                      crimes = "total number of crimes",
+                      unem = "unemployment rate (%)", 
+                      officers = "number of police officers", 
+                      pcinc = "per capita income, $",
+                      area = "land area, square miles", 
+                      lawexpc = "law enforcement expenditure per capita, $"
+                      )
+```
+
+### Task 5
+
+#### Task
+
+Create a new variable which measures the population density for each city.
+
+#### Guidance
+
+To generate a new variable and add it to the existing crime dataset, we use the following command:
+
+```{r}
+crime$popdens <- crime$pop / crime$area
+```
+
+You may wonder why we add `crime$` in front of every variable. The reason is that R can store more than one data frame, matrix, list, vector etc., at the same time, so the prefix `crime$` is necessary to avoid ambiguity and ensure that we are working with variables in the `crime` data. Think of `crime$` as an address where e.g. the variable `pop` stays. If you have loaded another data frame that contains a `pop` variable, R would know that we want to use the variable from the crime dataset and not from the other data frame. There are library packages that can facilitate the process, however, we will cover them later in the module.
+
+Note that the newly created population density variable is now labelled as the original population variable (`pop`). Let's update the label with the method we introduced in Task 4. Note that we do not need to call the library again, as it is already called.
+
+```{r}
+crime <- apply_labels(crime, 
+                      popdens = "population density: pop / area")
+```
+
+### Task 6
+
+#### Task
+
+Sort the data with respect to the population density of each city.
+
+#### Guidance
+
+Sorting data is a useful action to get a general feeling for the data, e.g. are there any outliers in the dataset? Are there any unusual patterns?
+
+To change the order of the rows in a data frame, we will apply the `order` function. We first rank all observations with respect to the population density and store this information in a vector called `rank`. The rank vector contains indices that we can use to sort the crime data frame. Below, we save the sorted data under a new name, `crime.popdens1`
+
+```{r}
+rank <- order(crime$popdens)
+crime.popdens1 <- crime[rank,]
+```
+
+Let's see the result (note. how the population density variable is now sorted from the smallest to the largest):
+
+```{r}
+head(crime.popdens1)
+# you may alternatively use 
+# View(crime.popdens1)
+```
+
+This procedure sorts the data from the smallest to the largest value. To sort the data from the largest to the smallest number, we set the order argument decreasing to TRUE.
+
+```{r}
+crime.popdens2 <- crime[order(crime$popdens, decreasing = TRUE),]
+head(crime.popdens2)
+```
+
+Have you observed a slight difference in the way we sorted the data? We can save some time and space by merging the two steps into one line, however, it is sometimes easier to understand a command if it is split into separate stages.
+
+### Task 7
+
+#### Task
+
+What is the minimum and maximum value for population density in the crime data?
+
+#### Guidance
+
+The minimum and maximum values can be produced by generating standard descriptive statistics of the variables.
+
+```{r}
+summary(crime$popdens)
+```
+
+Before you finish, save the dataset under a new name. Never overwrite your original data!
+
+```{r}
+save(crime, file = "./assets/data/crime_v2.Rdata")
+```
+
+The above command tells R to use the crime dataset and save it as `crime_v2.Rdata`. Rdata is an R specific format. R can also save data in .csv format, that can be opened with any text editor or spreadsheet software:
+
+```{r}
+write.csv(crime, file = "./assets/data/crime_v2.csv", row.names = TRUE) 
+```
+
+Now you are ready to answer the following questions on your own:
+
+### Further Exercises
+
+1.  Find the minimum and maximum number of police officers in the data set.
+2.  Create a new variable which measures the crime rate per 1,000 of population.
+3.  Is the city with the highest number of police officers also the city with the highest crime density?
+4.  How many crimes occurred in the richest city?
+5.  Is the richest city also the one with the highest number of police officers?
+6.  What is the average unemployment rate across these 46 U.S. cities?
+7.  Does the city with the highest unemployment rate also have the highest crime level?
