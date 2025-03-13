@@ -95,33 +95,9 @@ View(subset)
 # Combining the two lines under one 
 View(hprice2[, c("lprice", "lprice_hat")])
 
+# Saving residuals of model_3
+resid_3 <- residuals(model_3)
+
 # Summarising the three model estimates under one table
 stargazer(model_1, model_2, model_3, type = "text")
-
-
-bweight <- bwght %>%
-  
-  select(c(mage,cigs,male,bwght)) %>%
-  
-  drop_na()
-
-write.csv(bweight, file = "bweight.csv", row.names = FALSE)
-
-write.xlsx(bweight, file = "bweight.xlsx")
-
-plot(bweight$bwght~bweight$cigs, xlab = "Av. cigarettes a day")
-
-plot(bweight$bwght~bweight$mage, xlab = "Av. cigarettes a day")
-
-
-bwghtfit <- lm(bwght~cigs+mage+male, data=bweight)
-
-summary(bwghtfit)
-
-mean(bweight$bwght)
-
-price_fit <- lm(price~crime+rooms+stratio+nox, data=hprice2)
-
-summary(price_fit)
-
 
