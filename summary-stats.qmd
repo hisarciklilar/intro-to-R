@@ -1,5 +1,10 @@
 # Calculating Summary Statistics
 
+```{r, echo=FALSE}
+library(wooldridge)
+data("hprice2")
+```
+
 -   We may use the `mean()` function to find the average value of a variable. For example, below, we find the average housing price:
 
 ```{r}
@@ -52,6 +57,9 @@ We may calculate the covariance or correlation between the variables using the `
 # Covariance between price and crime
 cov(hprice2$price, hprice2$crime)
 
+```
+
+```{r}
 # Correlation between price and crime
 cor(hprice2$price, hprice2$crime)
 ```

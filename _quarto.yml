@@ -3,38 +3,30 @@ project:
 
 book:
   title: "Introduction to R"
-  author: "Mehtap Hisarciklilar & Robert Riegler"
+  author: "Dr Mehtap Hisarciklilar & Dr Robert Riegler"
   date: "1/20/2025"
   cover-image: cover.png
   chapters:
     - index.qmd
     
-    - part : Session 1: Introduction to Data Analsysis
-    chapters:
-    - intro.qmd
-    - basics-of-R.qmd
-    - importing-data.qmd
-    - summary-stats.qmd
-    - labelling-variables.qmd
-    - plotting-variables.qmd
-    - references.qmd
-
-  chapters:
-    - index.qmd
-    
-    - part: Seminar 1 (21 January 2025)
-      chapters: 
+    - part: Session 1 Introduction to Data Analysis
+      chapters:
       - intro.qmd
       - basics-of-R.qmd
-    - part: Seminar 2 (28 January 2025)
-    
-bibliography: references.bib
+      - importing-data.qmd
+      - summary-stats.qmd
+      - labelling-variables.qmd
+      - plotting-variables.qmd
+      - ols-regression.qmd
+      - student-activity-1.qmd
 
 format:
   html:
     theme: cosmo
   pdf:
     documentclass: scrreprt
+    keep-tex: true
+    output-file: pdf-book
 
 editor: visual
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Introduction to R – Introduction to R</title>
+<title>5&nbsp; Labeling Variables – Introduction to R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./basics-of-R.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./plotting-variables.html" rel="next">
+<link href="./summary-stats.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -115,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html">Session 1 Introduction to Data Analysis</a></li><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to R</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html">Session 1 Introduction to Data Analysis</a></li><li class="breadcrumb-item"><a href="./labelling-variables.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Labeling Variables</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -157,7 +157,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to R</span></span></a>
   </div>
 </li>
@@ -181,7 +181,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labelling-variables.html" class="sidebar-item-text sidebar-link">
+  <a href="./labelling-variables.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Labeling Variables</span></span></a>
   </div>
 </li>
@@ -210,23 +210,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#r-r-studio-and-quarto" id="toc-r-r-studio-and-quarto" class="nav-link active" data-scroll-target="#r-r-studio-and-quarto"><span class="header-section-number">1.1</span> R, R Studio and Quarto</a></li>
-  <li><a href="#file-organisation" id="toc-file-organisation" class="nav-link" data-scroll-target="#file-organisation"><span class="header-section-number">1.2</span> File Organisation</a></li>
-  <li><a href="#getting-help" id="toc-getting-help" class="nav-link" data-scroll-target="#getting-help"><span class="header-section-number">1.3</span> Getting Help</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html">Session 1 Introduction to Data Analysis</a></li><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to R</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html">Session 1 Introduction to Data Analysis</a></li><li class="breadcrumb-item"><a href="./labelling-variables.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Labeling Variables</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to R</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Labeling Variables</span></h1>
 </div>
 
 
@@ -243,54 +235,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="r-r-studio-and-quarto" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="r-r-studio-and-quarto"><span class="header-section-number">1.1</span> R, R Studio and Quarto</h2>
-<p>R is a very powerful statistical software that is becoming increasingly popular. Being able to do data analysis using R will very likely increase your employability.</p>
-<p><strong>Warning: R is not like other apps that you have used! It requires coding. You will need to practice regularly. There will be a lot of struggle, but the result is worth it.</strong></p>
-<p>We list below the apps that you will need to work with during the sessions. You may install these on your computers. Alternatively, you may use Coventry University’s <a href="https://appsanywhere.coventry.ac.uk/">Appsanywhere platform</a> to get access. But you will find working with the app easier if it is locally installed.</p>
-<ul>
-<li><p>We will be using <strong>R</strong> as the statistical analysis tool. For R documentations, support and download links, visit <a href="https://www.r-project.org/">the R Project for Statistical Computing</a>. R is freely available for Linux, MacOS and Windows. <strong>Please download the version that matches your computer’s operating system.</strong></p></li>
-<li><p>To facilitate your work with R, we highly recommend to download and install the integrated development environment (IDE) <strong>RStudio Desktop</strong> from <a href="https://posit.co/downloads/">posit</a>. This platform will make it easier for you to write and run R code.</p></li>
-<li><p>A final package that we highly recommend you to install is a publishing system, <strong>Quarto</strong>. You may use Quarto to produce documents in various formats (such as HTML, MS Word, PDF, PowerPoint, etc) while integrating your R code and output. You will easily have the option to change the format of your output as you desire. We will be using Quarto to produce documents in the third session of the series. Please visit <a href="https://quarto.org/">Quarto</a> for further information and download.</p>
-<ul>
-<li>Once you download Quarto, you will have access to it through RStudio.</li>
-</ul></li>
-</ul>
-<p>RStudio has four main windows, that often have more than just one purpose. <a href="#fig-rstudio-windows" class="quarto-xref">Figure&nbsp;<span>1.1</span></a> provides a brief description of each RStudio window. We will use all of them during the sessions, but the most important ones will be the console and the editor pane.</p>
-<div id="fig-rstudio-windows" class="quarto-float quarto-figure quarto-figure-center anchored" alt="An image showing RStudio windows" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-rstudio-windows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/introduction/rstudio.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="An image showing RStudio windows">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rstudio-windows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.1: RStudio windows and their functions
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="file-organisation" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="file-organisation"><span class="header-section-number">1.2</span> File Organisation</h2>
-<ul>
-<li><p>Create a folder for this workshop. This folder should include all material you download from <a href="2025.03 -- Introduction to R Software">shared OneDrive folder</a>. Group files in sub-folders in a way that you can locate them easily. So for example, <code>Introduction-to-R</code> may be the name of the folder and then you may have sub-folders such as <code>data</code>, <code>R-scripts</code>, etc.</p></li>
-<li><p>If you are using the computers in the lab, it may be best if you create a folder on your OneDrive account as you can easily access this at home and on-campus.</p></li>
-<li><p>Before working on the data, set your working directory. R will save all files in there and, if you want to open a dataset, R will also look in there first. Select the folder you have created for R workshops.</p></li>
-<li><p>Use <code>setwd(the_address_you_would_like_to_locate_your_work)</code> in the console to choose your work directory. You may alternatively do this through the menu:</p></li>
-</ul>
-<p><strong>Session –&gt; Set Working Directory –&gt; Choose Directory</strong></p>
-<p>You will see the console printing this action, which may help you to remember how to use the console next time.</p>
-<ul>
-<li>If you are unsure of in which folder your work is, type <code>getwd()</code> in the console and R will print the current location you are at.</li>
-</ul>
-</section>
-<section id="getting-help" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="getting-help"><span class="header-section-number">1.3</span> Getting Help</h2>
-<p>If you should ever struggle with some of R’s commands, a look into R’s help-files can be very helpful. To access the help file, you have to type into the console window <code>?</code> and then the command name. For example, if you want to know more about the command <code>getwd()</code>, type the following:</p>
+<p>There are alternative packages which could be used to label variables. We will be using the <code>Hmisc</code> package. Remember to install this package and call the library by running the code below (without the <code>#</code>):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>?<span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("Hmisc") # to label variables</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Hmisc)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'Hmisc'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    format.pval, units</code></pre>
+</div>
+</div>
+<p>We are ready to label our variables:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># label variables</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">label</span>(hprice2<span class="sc">$</span>price) <span class="ot">&lt;-</span> <span class="st">"Median housing price, $"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">label</span>(hprice2<span class="sc">$</span>crime) <span class="ot">&lt;-</span> <span class="st">"Crimes committed per capita"</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">label</span>(hprice2<span class="sc">$</span>nox) <span class="ot">&lt;-</span> <span class="st">"Nitrogen Oxide in the air, in parts per million"</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">label</span>(hprice2<span class="sc">$</span>stratio) <span class="ot">&lt;-</span> <span class="st">"Average student-teacher ratio of schools in the community"</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">label</span>(hprice2<span class="sc">$</span>rooms) <span class="ot">&lt;-</span> <span class="st">"Average number of rooms in houses in the community"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -712,13 +681,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Welcome!">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welcome!</span>
+      <a href="./summary-stats.html" class="pagination-link" aria-label="Calculating Summary Statistics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Calculating Summary Statistics</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./basics-of-R.html" class="pagination-link" aria-label="Basics of R">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Basics of R</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./plotting-variables.html" class="pagination-link" aria-label="Basic Plots of Data">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Basic Plots of Data</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

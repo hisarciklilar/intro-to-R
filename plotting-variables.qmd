@@ -1,38 +1,50 @@
 # Basic Plots of Data
 
-In Session 2 of this workshop, we will be using `ggplot2` for data visualisation in R, but for the moment, below are a few examples of what we can do with base R (with base R, we refer to the operations of R that could be done without installing or calling additional libraries).
+```{r, echo=FALSE}
+library(wooldridge)
+data("hprice2")
+```
 
-**Scatterplot** of
+In Session 2 of this workshop, we will be using `ggplot2` for data visualisation in R, which produces better-looking plots. For the moment, below are a few examples of what we can do with base R (with base R, we refer to the operations of R that could be done without installing or calling additional libraries).
+
+**Scatter plot**
+
+We may use scatter plots to depict the relationship between two variables. In the example below, we are depicting the relationship between housing price and crime. You may read the `~` between the two variables as *approximated by*. So here, price is approximated by crime.
 
 ```{r}
 # scatterplot showing the relationship between price and crimes 
-plot(hprice2$price ~ hprice2$crime, xlab = "Crimes committed per capita", 
+plot(hprice2$price ~ hprice2$crime)
+
+```
+
+We may add more informative titles to our axes and also provide a general title for the plot:
+
+```{r}
+# scatterplot showing the relationship between price and crimes 
+plot(hprice2$price ~ hprice2$crime, 
+     xlab = "Crimes committed per capita", 
      ylab = "Median housing price, $", 
      main = "Negative effect of crime on housing price")
+```
 
+As expected, there is a negative relationship between the crime rates in a location and the median house prices in that location.
+
+In the following pages, we will be estimating regresions to model the houseing price with a set of independent variables. Before moving on to regression analysis, it is good practice to get to know our dependent variable. A histogram will reveal its distribution.
+
+**Histogram**
+
+Below, we provide histograms of `price` and `lprice` (logarithmic price). Which one should we use in our regression?
+
+```{r}
 # Histogram of price and logarithmic price
-hist(hprice2$price, xlab = "Median housing price, $", 
-     main = "Histogram of median houseing price, $")
+hist(hprice2$price, 
+     xlab = "Median housing price, $", 
+     main = "Histogram of median housing price, $")
+```
 
-hist(hprice2$lprice, xlab = "Logarithm of median housing price, $", 
+```{r}
+hist(hprice2$lprice, 
+     xlab = "Logarithm of median housing price, $", 
      main = "Logarithm of median housing price, $")
 
-```
-
-here are alternative packages which could be used to label variables. We will be using the `Hmisc` package. Remember to install this package and call the library by running the code below (without the `#`):
-
-```{r}
-# install.packages("Hmisc") # to label variables
-library(Hmisc)
-```
-
-We are ready to label our variables:
-
-```{r}
-# label variables
-label(hprice2$price) <- "Median housing price, $"
-label(hprice2$crime) <- "Crimes committed per capita"
-label(hprice2$nox) <- "Nitrogen Oxide in the air, in parts per million"
-label(hprice2$stratio) <- "Average student-teacher ratio of schools in the community"
-label(hprice2$rooms) <- "Average number of rooms in houses in the community"
 ```

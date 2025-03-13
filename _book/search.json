@@ -2,9 +2,19 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "R-workshops",
+    "title": "Introduction to R",
     "section": "",
     "text": "Welcome!\nThis workbook is created for the Introduction to R sessions at Coventry University1.\norganised by the School of EFA Economics Lab team in collaboration with the British Council funded project “Strengthening Pathways into Employment: Female Students in Economics and Finance” at Coventry University.\nIt is written using Quarto on RStudio by\nDr Mehtap Hisarciklilar, Centre for Financial and Corporate Integrity\nDr Robert Riegler, Aston University",
+    "crumbs": [
+      "Welcome!"
+    ]
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "Introduction to R",
+    "section": "",
+    "text": "The workshop series are organised by the School of EFA Economics Lab team in collaboration with the British Council funded project “Strengthening Pathways into Employment: Female Students in Economics and Finance”.↩︎",
     "crumbs": [
       "Welcome!"
     ]
@@ -14,39 +24,10 @@
     "href": "intro.html",
     "title": "1  Introduction to R",
     "section": "",
-    "text": "1.1 R, R Studio and Quarto\nR is a very powerful statistical software that is becoming increasingly popular. Being able to do data analysis using R will very likely increase your employability.\nWarning: R is not like other apps that you have used! It requires coding. You will need to practice regularly. There will be a lot of struggle, but the result is worth it.\nWe list below the apps that you will need to work with during the sessions. You may install these on your computers. Alternatively, you may use Coventry University’s Appsanywhere platform to get access. But you will find working with the app easier if it is lcoally installed.\nRStudio has four main windows, that often have more than just one purpose. Figure 1.1 provides a brief description of each RStudio window. We will use all of them during the sessions, but the most important ones will be the console and the editor pane.",
+    "text": "1.1 R, R Studio and Quarto\nR is a very powerful statistical software that is becoming increasingly popular. Being able to do data analysis using R will very likely increase your employability.\nWarning: R is not like other apps that you have used! It requires coding. You will need to practice regularly. There will be a lot of struggle, but the result is worth it.\nWe list below the apps that you will need to work with during the sessions. You may install these on your computers. Alternatively, you may use Coventry University’s Appsanywhere platform to get access. But you will find working with the app easier if it is locally installed.\nRStudio has four main windows, that often have more than just one purpose. Figure 1.1 provides a brief description of each RStudio window. We will use all of them during the sessions, but the most important ones will be the console and the editor pane.",
     "crumbs": [
+      "Session 1 Introduction to Data Analysis",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R</span>"
-    ]
-  },
-  {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "2  Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
-    ]
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
-    "crumbs": [
-      "References"
-    ]
-  },
-  {
-    "objectID": "index.html#footnotes",
-    "href": "index.html#footnotes",
-    "title": "R-workshops",
-    "section": "",
-    "text": "The workshop series are organised by the School of EFA Economics Lab team in collaboration with the British Council funded project “Strengthening Pathways into Employment: Female Students in Economics and Finance”.↩︎",
-    "crumbs": [
-      "Welcome!"
     ]
   },
   {
@@ -56,6 +37,7 @@
     "section": "",
     "text": "We will be using R as the statistical analysis tool. For R documentations, support and download links, visit the R Project for Statistical Computing. R is freely available for Linux, MacOS and Windows. Please download the version that matches your computer’s operating system.\nTo facilitate your work with R, we highly recommend to download and install the integrated development environment (IDE) RStudio Desktop from posit. This platform will make it easier for you to write and run R code.\nA final package that we highly recommend you to install is a publishing system, Quarto. You may use Quarto to produce documents in various formats (such as HTML, MS Word, PDF, PowerPoint, etc) while integrating your R code and output. You will easily have the option to change the format of your output as you desire. We will be using Quarto to produce documents in the third session of the series. Please visit Quarto for further information and download.\n\nOnce you download Quarto, you will have access to it through RStudio.\n\n\n\n\n\n\n\n\n\nFigure 1.1: RStudio windows and their functions",
     "crumbs": [
+      "Session 1 Introduction to Data Analysis",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R</span>"
     ]
   },
@@ -66,6 +48,7 @@
     "section": "1.2 File Organisation",
     "text": "1.2 File Organisation\n\nCreate a folder for this workshop. This folder should include all material you download from shared OneDrive folder. Group files in sub-folders in a way that you can locate them easily. So for example, Introduction-to-R may be the name of the folder and then you may have sub-folders such as data, R-scripts, etc.\nIf you are using the computers in the lab, it may be best if you create a folder on your OneDrive account as you can easily access this at home and on-campus.\nBefore working on the data, set your working directory. R will save all files in there and, if you want to open a dataset, R will also look in there first. Select the folder you have created for R workshops.\nUse setwd(the_address_you_would_like_to_locate_your_work) in the console to choose your work directory. You may alternatively do this through the menu:\n\nSession –&gt; Set Working Directory –&gt; Choose Directory\nYou will see the console printing this action, which may help you to remember how to use the console next time.\n\nIf you are unsure of in which folder your work is, type getwd() in the console and R will print the current location you are at.",
     "crumbs": [
+      "Session 1 Introduction to Data Analysis",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R</span>"
     ]
   },
@@ -76,7 +59,173 @@
     "section": "1.3 Getting Help",
     "text": "1.3 Getting Help\nIf you should ever struggle with some of R’s commands, a look into R’s help-files can be very helpful. To access the help file, you have to type into the console window ? and then the command name. For example, if you want to know more about the command getwd(), type the following:\n\n?getwd()",
     "crumbs": [
+      "Session 1 Introduction to Data Analysis",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to R</span>"
+    ]
+  },
+  {
+    "objectID": "basics-of-R.html",
+    "href": "basics-of-R.html",
+    "title": "2  Basics of R",
+    "section": "",
+    "text": "2.1 Using R as a calculator\nYou may use R as a calculator. Some examples are given below.\n# Addition\n5 + 4\n\n[1] 9\n# Subtraction\n5 - 4\n\n[1] 1\n# Multiplication\n3 * 6\n\n[1] 18\n# Division\n10 / 2\n\n[1] 5\n# Exponents\n2^3\n\n[1] 8\n# Modulo\n5 %% 2\n\n[1] 1",
+    "crumbs": [
+      "Session 1 Introduction to Data Analysis",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Basics of R</span>"
+    ]
+  },
+  {
+    "objectID": "basics-of-R.html#using-r-as-a-calculator",
+    "href": "basics-of-R.html#using-r-as-a-calculator",
+    "title": "2  Basics of R",
+    "section": "",
+    "text": "2.1.1 Basic Operators\n\n\n\nOperator\nDescription\n\n\n\n\nArithmetic\n\n\n\n+\nAddition\n\n\n-\nSubtraction\n\n\n*\nMultiplication\n\n\n/\nDivision\n\n\n^ or **\nExponential\n\n\n%%\nModulus\n\n\n% / %\nInteger Division\n\n\nLogic\n\n\n\n&lt;\nLess than\n\n\n&lt;=\nLess than or equal to\n\n\n&gt;\nGreater than\n\n\n&gt;=\nGreater than or equal to\n\n\n==\nExactly equal to\n\n\n!=\nNot equal to\n\n\n!x\nNot x\n\n\nx | y\nx OR y\n\n\nx & y\nx AND y\n\n\n\n\n\n2.1.2 Order of operators\n\nParenthesis\nMultiplication / division\nAddition / subtraction\nMultiplication has the same importance as division. Similarly, addition and subtraction are at the same level. When we need to decide between the two, we apply the operation that shows first from the left to the right.\nUse of parentheses makes it easier to perform the correct operation\nCan you guess the result of the following operation?\n\n8 / 2 * ( 2 + 2)\n\n\n\n8 / 2 * ( 2 + 2)\n\n[1] 16\n\n\n\n8 / 2 * 2 + 2\n\n[1] 10\n\n\n\n100 * 2 + 50 / 2\n\n[1] 225\n\n\n\n(100 * 2) + (50 / 2)\n\n[1] 225",
+    "crumbs": [
+      "Session 1 Introduction to Data Analysis",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Basics of R</span>"
+    ]
+  },
+  {
+    "objectID": "basics-of-R.html#storing-information-in-objects",
+    "href": "basics-of-R.html#storing-information-in-objects",
+    "title": "2  Basics of R",
+    "section": "2.2 Storing information in objects",
+    "text": "2.2 Storing information in objects\nR lets you save data by storing it inside an R object. An object is a name that you can use to call up stored data.\n\na &lt;- 5\n\na\n\n[1] 5\n\n\n\na + 2\n\n[1] 7\n\n\nIn the example above, we store value of 5 under object a. We then call the value stored under a and sum it with 2.\nNote the use of &lt; together with - . This representation (&lt;-) resembles a backward pointing arrow, and it assigns the value 2 to the object a.\n\nb_vector &lt;- 1:6\nb_vector\n\n[1] 1 2 3 4 5 6\n\n## [1] 1 2 3 4 5 6\n\nIn the above example, we create a vector, whose elements are numbers from 1 to 6 and store it under b_vector.\nWhen you create an object, the object will appear in the environment pane of RStudio (on the top right-hand-side of the R screen). This pane will show you all of the objects you’ve created since opening RStudio.\n\n2.2.1 Naming of objects\nNote the following;\n\nAn object name cannot start with a number (for example, 2var or 2_var)\nA name cannot use some special symbols, like ^, !, $, @, +, -, /, or * . You may use _\nR is case-sensitive, so name and Name will refer to different objects\nR will overwrite any previous information stored in an object without asking your confirmation. So, be careful while making changes.\nYou can see which object names you have already used by calling the function ls:\n\nls()\n\n[1] \"a\"        \"b_vector\"\n\n## [1] \"a\"        \"b_vector\"\n\n\n\n\n2.2.2 Naming conventions\nYou may see the following styles for naming of variables:\n\nCamel case\n\nCamel case variable naming is common in Javascipt. However, it is considered as bad practise in R. Try to avoid this kind of naming.\n\nbankAccount = 100\n\n\nUse of dots\n\ndot is used in variable names by many R users. However, try to avoid this too because base R uses dots in function names (contrib.url()) and class names (data.frame). Avoiding dot in your variable names will help you avoid confusion, particularly in the initial stages of your learning!\n\nbank.account = 100\n\n\nSnake case\n\nUse of snake case is considered to be good practice. Try to follow this approach.\n\nbank_account = 100\n\nNote that you may find different users of R having a preference towards different styles. The recommendations above are from the “Tidyverse style guide”, which is available from https://style.tidyverse.org.\nStart your variable names with a lower case and reserve the capital letter start for function names!\n\n\n2.2.3 Removing objects\nYou will see that the Environment window can quickly get over-crowded while working interactively. You may remove the objects that you no longer need. by rm(object_name )\n\nrm(a)\n\nIf you have too many objects piled up and you would like to remove them all, then you may type rm(list = ls()). This will fully clear your environment.\n\nrm(list = ls())\n\n\n\n2.2.4 Example of using variables\nLet us calculate the module mark for a student who got 65% from coursework and 53% from exam. The weights for the coursework and exam are, respectively, 25% and 75%.\n\n# let's calculate module mark for a student\ncoursework &lt;- 65\nexam &lt;- 53\nmodule_mark &lt;- coursework * 0.25 + exam * 0.75\n\nprint(module_mark)\n\n[1] 56",
+    "crumbs": [
+      "Session 1 Introduction to Data Analysis",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Basics of R</span>"
+    ]
+  },
+  {
+    "objectID": "basics-of-R.html#datatypes-in-r",
+    "href": "basics-of-R.html#datatypes-in-r",
+    "title": "2  Basics of R",
+    "section": "2.3 Datatypes in R",
+    "text": "2.3 Datatypes in R\n\n2.3.1 Numeric\nDecimal numbers and integers are part of the numeric class in R.\n\n2.3.1.1 Decimal (floating point values)\n\ndecimal_number &lt;- 2.2\n\n\n\n2.3.1.2 Integer\n\ni &lt;- 5\n\n\n\n\n2.3.2 Logical\nBoolean values (TRUE and FALSE) are part of the logical class in R. These are written in capital letters.\n\nt &lt;- TRUE\nf &lt;- FALSE\n\n\nt\n\n[1] TRUE\n\n\n\nf\n\n[1] FALSE\n\n\n\n\n2.3.3 Characters\nText (string) values are known as characters in R. You may use single or double quotation to create a text (string).\n\nmessage &lt;- \"hello all!\"\nprint(message)\n\n[1] \"hello all!\"\n\n\n\nan_other_message &lt;- 'how are you?'\nprint(an_other_message)\n\n[1] \"how are you?\"\n\n\n\n\n2.3.4 Checking data type classes\nWe can use the class() function to check the data type of a variable:\n\nclass(decimal_number)\n\n[1] \"numeric\"\n\n\n\nclass(i)\n\n[1] \"numeric\"\n\n\n\nclass(t)\n\n[1] \"logical\"\n\n\n\nclass(f)\n\n[1] \"logical\"\n\n\n\nclass(message)\n\n[1] \"character\"",
+    "crumbs": [
+      "Session 1 Introduction to Data Analysis",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Basics of R</span>"
+    ]
+  },
+  {
+    "objectID": "basics-of-R.html#scripts",
+    "href": "basics-of-R.html#scripts",
+    "title": "2  Basics of R",
+    "section": "2.4 Scripts",
+    "text": "2.4 Scripts\nYou can create a draft of your code as you go by using an R script. An R script is just a plain text file that you save R code in. You can open an R script in RStudio using the menu bar:\nFile –&gt; New File –&gt; R Script\nWe will write and edit R code in a script. This will help create a reproducible record of your work. When you’re finished for the day, you can save your script and then use it to rerun your entire analysis the next day.\nTo save a script, click the scripts pane, and then go to File –&gt; Save As in the menu bar.\n\nYou can automatically execute a line of code in a script by clicking the Run button on the top right of the pane. R will run whichever line of code your cursor is on.\nIf you have a whole section highlighted, R will run the highlighted code.\nYou can run the entire script by clicking the Source button.\nYou can use Control + Return in your keyboard as a shortcut for the Run button. On Macs, that would be Command + Return.",
+    "crumbs": [
+      "Session 1 Introduction to Data Analysis",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Basics of R</span>"
+    ]
+  },
+  {
+    "objectID": "importing-data.html",
+    "href": "importing-data.html",
+    "title": "3  Importing and Viewing Data",
+    "section": "",
+    "text": "3.1 Example: House Price Data\nThe data that we will be using in this session come from R’s wooldridge package, which includes 115 data sets from “Introductory Econometrics: A Modern Approach, 7e” by Jeffrey M. Wooldridge”.\nWe will start by using hprice2 data, which includes information on 506 communities in the US Boston area. Below table provides a list of variables that we will use:",
+    "crumbs": [
+      "Session 1 Introduction to Data Analysis",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Importing and Viewing Data</span>"
+    ]
+  },
+  {
+    "objectID": "importing-data.html#example-house-price-data",
+    "href": "importing-data.html#example-house-price-data",
+    "title": "3  Importing and Viewing Data",
+    "section": "",
+    "text": "Variable\nDescription\n\n\n\n\nprice\nMedian housing price, $\n\n\ncrime\nCrimes committed per capita\n\n\nnox\nNitrogen Oxide in the air, in parts per million\n\n\nstratio\nAverage student-teacher ratio of schools in the community\n\n\nrooms\nAverage number of rooms in houses in the community\n\n\nlprice\nLogarithm of price",
+    "crumbs": [
+      "Session 1 Introduction to Data Analysis",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Importing and Viewing Data</span>"
+    ]
+  },
+  {
+    "objectID": "importing-data.html#packages-and-libraries",
+    "href": "importing-data.html#packages-and-libraries",
+    "title": "3  Importing and Viewing Data",
+    "section": "3.2 Packages and libraries",
+    "text": "3.2 Packages and libraries\nIn order to access specialised data analysis tools in R, we will need to install some R packages.\n“An R package is a collection of functions, data, and documentation that extends the capabilities of base R.\nWe will start by installing the wooldridge package. We require this package to access the Wooldridge data sets, mentioned above.\n\n# install.packages(\"wooldridge\")\n\nTo install wooldridge package, type the above line of code in the console (without the #), and then press enter to run it. R will download the packages from CRAN and install them on to your computer.\nOnce installed, you may use this package after loading it with the library() function.\n\nlibrary(wooldridge)",
+    "crumbs": [
+      "Session 1 Introduction to Data Analysis",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Importing and Viewing Data</span>"
+    ]
+  },
+  {
+    "objectID": "importing-data.html#open-data-as-an-r-object",
+    "href": "importing-data.html#open-data-as-an-r-object",
+    "title": "3  Importing and Viewing Data",
+    "section": "3.3 Open data as an R object",
+    "text": "3.3 Open data as an R object\nThe hprice2 data that we will be using already comes in R format within the wooldridge package. We can call it to our environment by using the data() function.\n\ndata(\"hprice2\")\n\nObserve that hprice2 is now added as an object to your environment. We can use the View function to view it (Note the capital V in View).Type the below line without the # in your console.\n\n# View(hprice2)",
+    "crumbs": [
+      "Session 1 Introduction to Data Analysis",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Importing and Viewing Data</span>"
+    ]
+  },
+  {
+    "objectID": "importing-data.html#import-excel-data-into-r",
+    "href": "importing-data.html#import-excel-data-into-r",
+    "title": "3  Importing and Viewing Data",
+    "section": "3.4 Import Excel data into R",
+    "text": "3.4 Import Excel data into R\nMost data we work with are initially in Excel or in text (such as csv) format. Importing data is one of the rare R commands that you can proceed with using the menu. You may find the Import Dataset button on the top right window and also under File menu. The hprice2 data is provided to you in Excel format. Try to import it using Import Dataset but this time, in the opening window, name the dataset as df under Import Options towards the left bottom.\nYou will see that R executes the following three lines of code:\n\nlibrary(readxl)\ndf &lt;- read_excel(\"data/hprice2.xlsx\")\nView(df)\n\nThe first line call the library required; the second line reads the Excel file and saves it under name df and the third line views the newly imported data.\nYou may use head() and tail() functions to view, respectively, the first few and the last few lines of the data.\n\n# View the first few observations of the data\nhead(hprice2)\n\n  price crime  nox rooms dist radial proptax stratio lowstat    lprice     lnox\n1 24000 0.006 5.38  6.57 4.09      1    29.6    15.3    4.98 10.085809 1.682688\n2 21599 0.027 4.69  6.42 4.97      2    24.2    17.8    9.14  9.980402 1.545433\n3 34700 0.027 4.69  7.18 4.97      2    24.2    17.8    4.03 10.454495 1.545433\n4 33400 0.032 4.58  7.00 6.06      3    22.2    18.7    2.94 10.416311 1.521699\n5 36199 0.069 4.58  7.15 6.06      3    22.2    18.7    5.33 10.496787 1.521699\n6 28701 0.030 4.58  6.43 6.06      3    22.2    18.7    5.21 10.264688 1.521699\n  lproptax\n1 5.690360\n2 5.488938\n3 5.488938\n4 5.402678\n5 5.402678\n6 5.402678\n\n\n\n# View the last few observations of the data\ntail(hprice2)\n\n    price crime  nox rooms dist radial proptax stratio lowstat    lprice\n501 16800 0.224 5.85  6.03 2.50      6    39.1    19.2   14.33  9.729135\n502 22400 0.063 5.73  6.59 2.48      1    27.3    21.0    9.67 10.016816\n503 20600 0.045 5.73  6.12 2.29      1    27.3    21.0    9.08  9.933046\n504 23899 0.061 5.73  6.98 2.17      1    27.3    21.0    5.64 10.081592\n505 22000 0.110 5.73  6.79 2.39      1    27.3    21.0    6.48  9.998797\n506 11900 0.047 5.73  6.03 2.51      1    27.3    21.0    7.88  9.384294\n        lnox lproptax\n501 1.766442 5.968708\n502 1.745715 5.609472\n503 1.745715 5.609472\n504 1.745715 5.609472\n505 1.745715 5.609472\n506 1.745715 5.609472",
+    "crumbs": [
+      "Session 1 Introduction to Data Analysis",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Importing and Viewing Data</span>"
+    ]
+  },
+  {
+    "objectID": "summary-stats.html",
+    "href": "summary-stats.html",
+    "title": "4  Calculating Summary Statistics",
+    "section": "",
+    "text": "We may use the mean() function to find the average value of a variable. For example, below, we find the average housing price:\n\n\n# Calculate the average price\nmean(hprice2$price)\n\n[1] 22511.51\n\n\n\nSimilarly median() function could be used to find the median.\n\n\n# Calculate the median price\nmedian(hprice2$price)\n\n[1] 21200\n\n\n\nUse sd() for standard deviation\n\n\n# Calculate the standard deviation of price\nsd(hprice2$price)\n\n[1] 9208.856\n\n\nYou may wonder why we add hprice2$ in front of every variable. The reason is that R can store more than one data frame, matrix, list, vector etc., at the same time, so the prefix hprice2$ is necessary to avoid ambiguity and ensure that we are working with variables in the hprice2 data. Think of hprice2$ as an address where e.g. the variable price stays. If you have loaded another data frame that contains a price variable, R would know that we want to use the variable from the hprice2 data set and not from the other data frame. There are library packages that can facilitate the process, however, these are beyond the scope of this workshop.\nIn addition to mean and median, we may be interested with the minimum and maximum values. In that case, we can use the summary() function to ask for a full set of summary statistics. (Please note that summary() function does not report the standard deviation. You will need to use the sd() function for that).\n\n# Summary statistics for price\nsummary(hprice2$price)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   5000   16850   21200   22512   24999   50001 \n\n\nAgain, note the use of hprice2$ above.\nWe can provide the name of the data set as an argument in the summary() function to get summary statistics for all variables in the data.\n\n# summary statistics for all variables\nsummary(hprice2)\n\n     price           crime              nox           rooms      \n Min.   : 5000   Min.   : 0.0060   Min.   :3.85   Min.   :3.560  \n 1st Qu.:16850   1st Qu.: 0.0820   1st Qu.:4.49   1st Qu.:5.883  \n Median :21200   Median : 0.2565   Median :5.38   Median :6.210  \n Mean   :22512   Mean   : 3.6115   Mean   :5.55   Mean   :6.284  \n 3rd Qu.:24999   3rd Qu.: 3.6770   3rd Qu.:6.24   3rd Qu.:6.620  \n Max.   :50001   Max.   :88.9760   Max.   :8.71   Max.   :8.780  \n      dist            radial          proptax         stratio     \n Min.   : 1.130   Min.   : 1.000   Min.   :18.70   Min.   :12.60  \n 1st Qu.: 2.100   1st Qu.: 4.000   1st Qu.:27.90   1st Qu.:17.40  \n Median : 3.210   Median : 5.000   Median :33.00   Median :19.10  \n Mean   : 3.796   Mean   : 9.549   Mean   :40.82   Mean   :18.46  \n 3rd Qu.: 5.188   3rd Qu.:24.000   3rd Qu.:66.60   3rd Qu.:20.20  \n Max.   :12.130   Max.   :24.000   Max.   :71.10   Max.   :22.00  \n    lowstat           lprice            lnox          lproptax    \n Min.   : 1.730   Min.   : 8.517   Min.   :1.348   Min.   :5.231  \n 1st Qu.: 6.923   1st Qu.: 9.732   1st Qu.:1.502   1st Qu.:5.631  \n Median :11.360   Median : 9.962   Median :1.683   Median :5.799  \n Mean   :12.701   Mean   : 9.941   Mean   :1.693   Mean   :5.931  \n 3rd Qu.:17.058   3rd Qu.:10.127   3rd Qu.:1.831   3rd Qu.:6.501  \n Max.   :39.070   Max.   :10.820   Max.   :2.164   Max.   :6.567  \n\n\nAnd finally, if we may want to have summary statistics only for a selection of variables, for example, price, nox, and crime.\n\n# summary statistics for a selection of variables:\nsummary(hprice2[, c(\"price\", \"nox\", \"crime\")])\n\n     price            nox           crime        \n Min.   : 5000   Min.   :3.85   Min.   : 0.0060  \n 1st Qu.:16850   1st Qu.:4.49   1st Qu.: 0.0820  \n Median :21200   Median :5.38   Median : 0.2565  \n Mean   :22512   Mean   :5.55   Mean   : 3.6115  \n 3rd Qu.:24999   3rd Qu.:6.24   3rd Qu.: 3.6770  \n Max.   :50001   Max.   :8.71   Max.   :88.9760  \n\n\nWe may calculate the covariance or correlation between the variables using the cov() and cor() functions:\n\n# Covariance between price and crime\ncov(hprice2$price, hprice2$crime)\n\n[1] -30686.87\n\n\n\n# Correlation between price and crime\ncor(hprice2$price, hprice2$crime)\n\n[1] -0.3879191",
+    "crumbs": [
+      "Session 1 Introduction to Data Analysis",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Calculating Summary Statistics</span>"
+    ]
+  },
+  {
+    "objectID": "labelling-variables.html",
+    "href": "labelling-variables.html",
+    "title": "5  Labeling Variables",
+    "section": "",
+    "text": "There are alternative packages which could be used to label variables. We will be using the Hmisc package. Remember to install this package and call the library by running the code below (without the #):\n\n# install.packages(\"Hmisc\") # to label variables\nlibrary(Hmisc)\n\n\nAttaching package: 'Hmisc'\n\n\nThe following objects are masked from 'package:base':\n\n    format.pval, units\n\n\nWe are ready to label our variables:\n\n# label variables\nlabel(hprice2$price) &lt;- \"Median housing price, $\"\nlabel(hprice2$crime) &lt;- \"Crimes committed per capita\"\nlabel(hprice2$nox) &lt;- \"Nitrogen Oxide in the air, in parts per million\"\nlabel(hprice2$stratio) &lt;- \"Average student-teacher ratio of schools in the community\"\nlabel(hprice2$rooms) &lt;- \"Average number of rooms in houses in the community\"",
+    "crumbs": [
+      "Session 1 Introduction to Data Analysis",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Labeling Variables</span>"
+    ]
+  },
+  {
+    "objectID": "plotting-variables.html",
+    "href": "plotting-variables.html",
+    "title": "6  Basic Plots of Data",
+    "section": "",
+    "text": "In Session 2 of this workshop, we will be using ggplot2 for data visualisation in R, which produces better-looking plots. For the moment, below are a few examples of what we can do with base R (with base R, we refer to the operations of R that could be done without installing or calling additional libraries).\nScatter plot\nWe may use scatter plots to depict the relationship between two variables. In the example below, we are depicting the relationship between housing price and crime. You may read the ~ between the two variables as approximated by. So here, price is approximated by crime.\n\n# scatterplot showing the relationship between price and crimes \nplot(hprice2$price ~ hprice2$crime)\n\n\n\n\n\n\n\n\nWe may add more informative titles to our axes and also provide a general title for the plot:\n\n# scatterplot showing the relationship between price and crimes \nplot(hprice2$price ~ hprice2$crime, \n     xlab = \"Crimes committed per capita\", \n     ylab = \"Median housing price, $\", \n     main = \"Negative effect of crime on housing price\")\n\n\n\n\n\n\n\n\nAs expected, there is a negative relationship between the crime rates in a location and the median house prices in that location.\nIn the following pages, we will be estimating regresions to model the houseing price with a set of independent variables. Before moving on to regression analysis, it is good practice to get to know our dependent variable. A histogram will reveal its distribution.\nHistogram\nBelow, we provide histograms of price and lprice (logarithmic price). Which one should we use in our regression?\n\n# Histogram of price and logarithmic price\nhist(hprice2$price, \n     xlab = \"Median housing price, $\", \n     main = \"Histogram of median housing price, $\")\n\n\n\n\n\n\n\n\n\nhist(hprice2$lprice, \n     xlab = \"Logarithm of median housing price, $\", \n     main = \"Logarithm of median housing price, $\")",
+    "crumbs": [
+      "Session 1 Introduction to Data Analysis",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Basic Plots of Data</span>"
+    ]
+  },
+  {
+    "objectID": "ols-regression.html",
+    "href": "ols-regression.html",
+    "title": "7  OLS Regression",
+    "section": "",
+    "text": "We will start with a simple regression relating logarithmic house prices with crime. Below, we will name and store this regression as model_1. Note that you may provide any name as you wish, as long as it does not clash with the naming conventions. For example, while model_1 is OK, 1_model is not possible.\n\n# Regression\nmodel_1 &lt;- lm(lprice ~ crime, data = hprice2)\nsummary(model_1)\n\n\nCall:\nlm(formula = lprice ~ crime, data = hprice2)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-1.1736 -0.2041 -0.0301  0.1750  1.4538 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 10.031818   0.016786  597.63   &lt;2e-16 ***\ncrime       -0.025131   0.001803  -13.94   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.348 on 504 degrees of freedom\nMultiple R-squared:  0.2783,    Adjusted R-squared:  0.2768 \nF-statistic: 194.3 on 1 and 504 DF,  p-value: &lt; 2.2e-16\n\n\n\nThe R function we use for linear regression is lm, which stands for linear model.\nThe regression equation we are estimating is given by lprice ~ crime, where price is approximated by crime.\ndata = hprice2 refers to the hprice2 data we are using\nsummary(model_1) is a separate line of command, which asks R to provide the summary estimation results.\n\nWe may add another independent variable in the model by using a + sign. This time it is saved under name model_2.\n\nmodel_2 &lt;- lm(lprice ~ crime + nox, data = hprice2)\nsummary(model_2)\n\n\nCall:\nlm(formula = lprice ~ crime + nox, data = hprice2)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-1.08309 -0.18979 -0.05017  0.16518  1.10231 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 10.689699   0.074846 142.822   &lt;2e-16 ***\ncrime       -0.018140   0.001847  -9.822   &lt;2e-16 ***\nnox         -0.123091   0.013696  -8.987   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.3234 on 503 degrees of freedom\nMultiple R-squared:  0.3781,    Adjusted R-squared:  0.3756 \nF-statistic: 152.9 on 2 and 503 DF,  p-value: &lt; 2.2e-16\n\n\nLet us add two mode independent variables under name model_3:\n\nmodel_3 &lt;- lm(lprice ~ crime + nox + stratio + rooms, \n              data = hprice2)\nsummary(model_3)\n\n\nCall:\nlm(formula = lprice ~ crime + nox + stratio + rooms, data = hprice2)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.87500 -0.12789  0.00664  0.11087  1.35514 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  9.653725   0.187981  51.355  &lt; 2e-16 ***\ncrime       -0.013143   0.001450  -9.065  &lt; 2e-16 ***\nnox         -0.078260   0.010751  -7.279 1.31e-12 ***\nstratio     -0.042702   0.005568  -7.670 9.04e-14 ***\nrooms        0.247830   0.017289  14.334  &lt; 2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.2465 on 501 degrees of freedom\nMultiple R-squared:   0.64, Adjusted R-squared:  0.6371 \nF-statistic: 222.6 on 4 and 501 DF,  p-value: &lt; 2.2e-16\n\n\nWe may want to save the residuals or predictions after estimating an OLS model.\n\nUse predict() to store the predictions for the dependent variable.\n\nCan you tell the difference between the two lines below?\n\nprice_hat &lt;- predict(model_3)\n\nhprice2$lprice_hat &lt;- predict(model_3)\n\nIn the first one predictions are saved under a separate object of its own while the second line saves these as a variable in our hprice2 data.\n\nUse rediduals to store the residuals of the model.\n\n\n# Saving residuals of model_3\nresid_3 &lt;- residuals(model_3)\n\nLet us view the newly created lprice_hat variable. We can do this by viewing the whole data set:\n\n# View the newly created predicted price variable - whole data\n#View(hprice2)\n\nIt is difficult to compare the actual and predicted value columns above. We may ask R to view only a selection of variable rather than the full data.\n\n# Create a subset of variables and then view them\nsubset &lt;- hprice2[, c(\"lprice\", \"lprice_hat\")]\n#View(subset)\n\n# Combining the two lines under one \n#View(hprice2[, c(\"lprice\", \"lprice_hat\")])\n\nFinally, we may use a summary table to present results of the three models together. We use the stargazer package for that.\n\n#install.packages(\"stargazer\")\nlibrary(stargazer)\n\n\nPlease cite as: \n\n\n Hlavac, Marek (2022). stargazer: Well-Formatted Regression and Summary Statistics Tables.\n\n\n R package version 5.2.3. https://CRAN.R-project.org/package=stargazer \n\n# Summarising the three model estimates under one table\nstargazer(model_1, model_2, model_3, type = \"text\")\n\n\n==============================================================================================\n                                               Dependent variable:                            \n                    --------------------------------------------------------------------------\n                                                      lprice                                  \n                              (1)                      (2)                      (3)           \n----------------------------------------------------------------------------------------------\ncrime                      -0.025***                -0.018***                -0.013***        \n                            (0.002)                  (0.002)                  (0.001)         \n                                                                                              \nnox                                                 -0.123***                -0.078***        \n                                                     (0.014)                  (0.011)         \n                                                                                              \nstratio                                                                      -0.043***        \n                                                                              (0.006)         \n                                                                                              \nrooms                                                                         0.248***        \n                                                                              (0.017)         \n                                                                                              \nConstant                   10.032***                10.690***                 9.654***        \n                            (0.017)                  (0.075)                  (0.188)         \n                                                                                              \n----------------------------------------------------------------------------------------------\nObservations                  506                      506                      506           \nR2                           0.278                    0.378                    0.640          \nAdjusted R2                  0.277                    0.376                    0.637          \nResidual Std. Error     0.348 (df = 504)         0.323 (df = 503)         0.247 (df = 501)    \nF Statistic         194.303*** (df = 1; 504) 152.911*** (df = 2; 503) 222.623*** (df = 4; 501)\n==============================================================================================\nNote:                                                              *p&lt;0.1; **p&lt;0.05; ***p&lt;0.01",
+    "crumbs": [
+      "Session 1 Introduction to Data Analysis",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>OLS Regression</span>"
+    ]
+  },
+  {
+    "objectID": "student-activity-1.html",
+    "href": "student-activity-1.html",
+    "title": "8  Student Activity",
+    "section": "",
+    "text": "Work on the following tasks on your own or with a person sitting next to you.\n\nClear the environment\nCreate a new project called birth-weight. You may do this either through the File menu or the button on the top right center of your screen.\nImport the bweight Excel data into R.\nBelow are the labels of the variables. Assign these to each of the correponding variable in data.\n\n\n\nVariable\nLabel\n\n\n\n\nbwght\nbaby’s birth weight, in grams\n\n\nmage\nmother’s age\n\n\ncigs\naverage number of cigarettes smoked per day\n\n\nmale\ndummy variable equal to 1 if baby is a male\n\n\n\nProvide summary statistics for the variables.\nCalculate the standard deviation for the bwght variable.\nEstimate a regression model which explains the bwght with the mother’s age, smoking behaviour, and the baby’s gender.\nUsing the model you estimated, predict the baby’s birth weight for the individuals in the sample.",
+    "crumbs": [
+      "Session 1 Introduction to Data Analysis",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Student Activity</span>"
     ]
   }
 ]
