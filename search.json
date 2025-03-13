@@ -119,6 +119,17 @@
     ]
   },
   {
+    "objectID": "basics-of-R.html#r-projects",
+    "href": "basics-of-R.html#r-projects",
+    "title": "2  Basics of R",
+    "section": "2.5 R Projects",
+    "text": "2.5 R Projects\nR projects make it easier to save all your work and continue from where you left next time. They are portable. Please check the information here.",
+    "crumbs": [
+      "Session 1 Introduction to Data Analysis",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Basics of R</span>"
+    ]
+  },
+  {
     "objectID": "importing-data.html",
     "href": "importing-data.html",
     "title": "3  Importing and Viewing Data",
@@ -222,7 +233,7 @@
     "href": "student-activity-1.html",
     "title": "8  Student Activity",
     "section": "",
-    "text": "Work on the following tasks on your own or with a person sitting next to you.\n\nClear the environment\nCreate a new project called birth-weight. You may do this either through the File menu or the button on the top right center of your screen.\nImport the bweight Excel data into R.\nBelow are the labels of the variables. Assign these to each of the correponding variable in data.\n\n\n\nVariable\nLabel\n\n\n\n\nbwght\nbaby’s birth weight, in grams\n\n\nmage\nmother’s age\n\n\ncigs\naverage number of cigarettes smoked per day\n\n\nmale\ndummy variable equal to 1 if baby is a male\n\n\n\nProvide summary statistics for the variables.\nCalculate the standard deviation for the bwght variable.\nEstimate a regression model which explains the bwght with the mother’s age, smoking behaviour, and the baby’s gender.\nUsing the model you estimated, predict the baby’s birth weight for the individuals in the sample.",
+    "text": "Work on the following tasks on your own or with a person sitting next to you.\n\nClose the project you have been working on. R will ask you whether you would like to save your changes. Your response should be a yes if you want to keep all your work!\nCreate a new project called birth-weight. You may do this either through the File menu or the button on the top right center of your screen. Please position this project in a new folder that you create under your R session folder.\nCreate a new R script file to add your code.\nImport the bweight Excel data into R.\nBelow are the labels of the variables. Assign these to each of the corresponding variable in data.\n\n\n\nVariable\nLabel\n\n\n\n\nbwght\nbaby’s birth weight, in grams\n\n\nmage\nmother’s age\n\n\ncigs\naverage number of cigarettes smoked per day\n\n\nmale\ndummy variable equal to 1 if baby is a male\n\n\n\nProvide summary statistics for the variables.\nCalculate the standard deviation for the bwght variable.\nEstimate a regression model which explains the bwght with the mother’s age, smoking behaviour, and the baby’s gender.\nUsing the model you estimated, predict the baby’s birth weight for the individuals in the sample.",
     "crumbs": [
       "Session 1 Introduction to Data Analysis",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Student Activity</span>"

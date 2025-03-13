@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.39">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-626149efe8f5d16e1d391ba177679bf0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -235,6 +235,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#checking-data-type-classes" id="toc-checking-data-type-classes" class="nav-link" data-scroll-target="#checking-data-type-classes"><span class="header-section-number">2.3.4</span> Checking data type classes</a></li>
   </ul></li>
   <li><a href="#scripts" id="toc-scripts" class="nav-link" data-scroll-target="#scripts"><span class="header-section-number">2.4</span> Scripts</a></li>
+  <li><a href="#r-projects" id="toc-r-projects" class="nav-link" data-scroll-target="#r-projects"><span class="header-section-number">2.5</span> R Projects</a></li>
   </ul>
 </nav>
     </div>
@@ -633,6 +634,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>You can run the entire script by clicking the Source button.</p></li>
 <li><p>You can use Control + Return in your keyboard as a shortcut for the Run button. On Macs, that would be Command + Return.</p></li>
 </ul>
+</section>
+<section id="r-projects" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="r-projects"><span class="header-section-number">2.5</span> R Projects</h2>
+<p>R projects make it easier to save all your work and continue from where you left next time. They are portable. Please check the information <a href="https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects">here</a>.</p>
 
 
 </section>
@@ -720,6 +725,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -830,6 +837,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
